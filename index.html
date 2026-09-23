@@ -267,6 +267,39 @@
         box-shadow: 0 12px 34px rgba(7, 63, 71, 0.08);
       }
       .event-card p { margin-top: 7px; color: var(--muted); }
+      .event-card.has-photo {
+        grid-template-columns: minmax(0, 1fr) minmax(210px, 240px);
+        grid-template-areas:
+          "copy photo"
+          "action photo";
+        align-items: start;
+      }
+      .event-card.has-photo .event-copy { grid-area: copy; }
+      .event-card.has-photo .action { grid-area: action; justify-self: start; }
+      .event-photo {
+        grid-area: photo;
+        position: relative;
+        align-self: stretch;
+        min-height: 205px;
+        margin: 0;
+        border-radius: 14px;
+        background: var(--foam);
+        overflow: hidden;
+      }
+      .event-photo img { width: 100%; height: 100%; min-height: 205px; object-fit: cover; }
+      .event-photo figcaption {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        left: 8px;
+        padding: 6px 8px;
+        border-radius: 8px;
+        color: #fff;
+        background: rgba(3, 38, 43, 0.76);
+        font-size: 0.68rem;
+        line-height: 1.35;
+        text-align: center;
+      }
       .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
       .status {
         display: inline-flex;
@@ -364,6 +397,11 @@
         .event time { grid-column: 2; padding: 0 0 2px; text-align: left; font-size: 0.82rem; }
         .marker { grid-column: 1; grid-row: 1 / span 2; margin-top: 5px; }
         .event-card { grid-column: 2; grid-template-columns: 1fr; padding: 17px; }
+        .event-card.has-photo {
+          grid-template-columns: 1fr;
+          grid-template-areas: "copy" "photo" "action";
+        }
+        .event-photo, .event-photo img { min-height: 215px; }
         .action { width: 100%; }
         .feature { grid-template-columns: 1fr; }
         .feature figure { min-height: 290px; }
@@ -455,27 +493,47 @@
 
           <article class="event">
             <time>09:30–11:30</time><span class="marker"></span>
-            <div class="event-card"><div><h3>向禾休閒漁場／咩咩上樹</h3><p>上午主活動二選一。選向禾就玩划船、撈海菜與摸文蛤；選咩咩上樹則改為萌寵餵食與親子散步。</p><div class="meta"><span class="status pending">待選定 · 需先聯繫</span><span class="status">停留 2 小時</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%90%91%E7%A6%BE%E4%BC%91%E9%96%92%E6%BC%81%E5%A0%B4" target="_blank" rel="noopener">向禾導航</a></div>
+            <div class="event-card has-photo">
+              <div class="event-copy"><h3>向禾休閒漁場／咩咩上樹</h3><p>上午主活動二選一。選向禾就玩划船、撈海菜與摸文蛤；選咩咩上樹則改為萌寵餵食與親子散步。</p><div class="meta"><span class="status pending">待選定 · 需先聯繫</span><span class="status">停留 2 小時</span></div></div>
+              <figure class="event-photo"><img src="assets/dongshi-oyster-farm.jpg" alt="東石蚵田海面上的竹棚" loading="lazy" /><figcaption>東石蚵田 · lienyuan lee／CC BY 3.0</figcaption></figure>
+              <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%90%91%E7%A6%BE%E4%BC%91%E9%96%92%E6%BC%81%E5%A0%B4" target="_blank" rel="noopener">向禾導航</a>
+            </div>
           </article>
 
           <article class="event">
             <time>11:50–13:20</time><span class="marker"></span>
-            <div class="event-card"><div><h3>東石在地海鮮大餐</h3><p>現烤鮮蚵、海鮮炒麵、酥炸花枝丸與蚵仔煎。餐廳尚未指定，團體出發前先訂位並確認兒童座椅。</p><div class="meta"><span class="status pending">餐廳待確認</span><span class="status">用餐 90 分鐘</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E7%9F%B3%E6%B5%B7%E9%AE%AE%E9%A4%90%E5%BB%B3" target="_blank" rel="noopener">找東石海鮮</a></div>
+            <div class="event-card has-photo">
+              <div class="event-copy"><h3>東石在地海鮮大餐</h3><p>現烤鮮蚵、海鮮炒麵、酥炸花枝丸與蚵仔煎。餐廳尚未指定，團體出發前先訂位並確認兒童座椅。</p><div class="meta"><span class="status pending">餐廳待確認</span><span class="status">用餐 90 分鐘</span></div></div>
+              <figure class="event-photo"><img src="assets/dongshi-oyster-trellis.jpg" alt="東石漁港蚵棚間行駛的觀光船" loading="lazy" /><figcaption>東石蚵棚與觀光船 · Mk2010／CC BY-SA 4.0</figcaption></figure>
+              <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E7%9F%B3%E6%B5%B7%E9%AE%AE%E9%A4%90%E5%BB%B3" target="_blank" rel="noopener">找東石海鮮</a>
+            </div>
           </article>
 
           <article class="event">
             <time>13:45–14:50</time><span class="marker"></span>
-            <div class="event-card"><div><h3>高跟鞋教堂＋好美里 3D 彩繪村</h3><p>這段是快速拍照行程：先看藍色玻璃高跟鞋，再到好美里找鯊魚破牆地畫。兩地移動會壓縮停留時間，若午餐延誤就保留一站即可。</p><div class="meta"><span class="status fixed">緊湊段 · 65 分鐘</span><span class="status">延誤時二選一</span></div></div><a class="action" href="https://www.google.com/maps/dir/?api=1&origin=%E9%AB%98%E8%B7%9F%E9%9E%8B%E6%95%99%E5%A0%82&destination=%E5%A5%BD%E7%BE%8E%E9%87%8C3D%E5%BD%A9%E7%B9%AA%E6%9D%91&travelmode=driving" target="_blank" rel="noopener">兩站路線</a></div>
+            <div class="event-card has-photo">
+              <div class="event-copy"><h3>高跟鞋教堂＋好美里 3D 彩繪村</h3><p>這段是快速拍照行程：先看藍色玻璃高跟鞋，再到好美里找鯊魚破牆地畫。兩地移動會壓縮停留時間，若午餐延誤就保留一站即可。</p><div class="meta"><span class="status fixed">緊湊段 · 65 分鐘</span><span class="status">延誤時二選一</span></div></div>
+              <figure class="event-photo"><img src="assets/high-heel-church.jpg" alt="布袋高跟鞋教堂的藍色玻璃外觀" loading="lazy" /><figcaption>高跟鞋教堂 · Taiwankengo／CC BY-SA 4.0</figcaption></figure>
+              <a class="action" href="https://www.google.com/maps/dir/?api=1&origin=%E9%AB%98%E8%B7%9F%E9%9E%8B%E6%95%99%E5%A0%82&destination=%E5%A5%BD%E7%BE%8E%E9%87%8C3D%E5%BD%A9%E7%B9%AA%E6%9D%91&travelmode=driving" target="_blank" rel="noopener">兩站路線</a>
+            </div>
           </article>
 
           <article class="event">
             <time>15:00–15:50</time><span class="marker"></span>
-            <div class="event-card"><div><h3>布袋觀光漁市 · 海味下午茶</h3><p>小朋友挑花枝丸、雙胞胎或海鹽霜淇淋，大人採買海產伴手禮。記得 15:45 前集合，不把五分車時間吃掉。</p><div class="meta"><span class="status fixed">集合 · 15:45</span><span class="status">停留 50 分鐘</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E8%A2%8B%E8%A7%80%E5%85%89%E6%BC%81%E5%B8%82" target="_blank" rel="noopener">漁市導航</a></div>
+            <div class="event-card has-photo">
+              <div class="event-copy"><h3>布袋觀光漁市 · 海味下午茶</h3><p>小朋友挑花枝丸、雙胞胎或海鹽霜淇淋，大人採買海產伴手禮。記得 15:45 前集合，不把五分車時間吃掉。</p><div class="meta"><span class="status fixed">集合 · 15:45</span><span class="status">停留 50 分鐘</span></div></div>
+              <figure class="event-photo"><img src="assets/budai-fishing-port.jpg" alt="布袋第三漁港內的漁船與蚵棚" loading="lazy" /><figcaption>布袋第三漁港 · Taiwankengo／CC BY-SA 4.0</figcaption></figure>
+              <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E8%A2%8B%E8%A7%80%E5%85%89%E6%BC%81%E5%B8%82" target="_blank" rel="noopener">漁市導航</a>
+            </div>
           </article>
 
           <article class="event">
             <time>16:30–17:30</time><span class="marker"></span>
-            <div class="event-card"><div><h3>蒜頭糖廠蔗埕文化園區</h3><p>搭復古五分車漫遊田園、聽導覽，回到園區再吃一枝台糖冰棒。班次與行駛路線依日期不同，務必先確認，不把「16:30」當成已訂妥班次。</p><div class="meta"><span class="status pending">班次待確認／預約</span><span class="status">園區全年開放</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80" target="_blank" rel="noopener">糖廠導航</a></div>
+            <div class="event-card has-photo">
+              <div class="event-copy"><h3>蒜頭糖廠蔗埕文化園區</h3><p>搭復古五分車漫遊田園、聽導覽，回到園區再吃一枝台糖冰棒。班次與行駛路線依日期不同，務必先確認，不把「16:30」當成已訂妥班次。</p><div class="meta"><span class="status pending">班次待確認／預約</span><span class="status">園區全年開放</span></div></div>
+              <figure class="event-photo"><img src="assets/suantou-wufen-train.jpg" alt="蒜頭糖廠園區內的台糖五分車" loading="lazy" /><figcaption>蒜頭糖廠五分車 · Leo20041201／CC BY-SA 4.0</figcaption></figure>
+              <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80" target="_blank" rel="noopener">糖廠導航</a>
+            </div>
           </article>
 
           <article class="event">
@@ -541,12 +599,15 @@
           <a href="https://www.taisugar.com.tw/Chinese/Attractions_detail.aspx?n=10048&p=0&s=77" target="_blank" rel="noopener">台糖蒜頭糖廠<span>園區介紹、地址與五分車資訊</span></a>
           <a href="https://www.cwa.gov.tw/" target="_blank" rel="noopener">中央氣象署<span>出發前查嘉義沿海天氣、風勢與雷達回波</span></a>
           <a href="https://commons.wikimedia.org/wiki/File:2023_High-Heel_Wedding_Church.jpg" target="_blank" rel="noopener">封面照片授權<span>Taiwankengo，CC BY-SA 4.0</span></a>
+          <a href="https://commons.wikimedia.org/wiki/File:Dongshi_Oyster_Farm_%E6%9D%B1%E7%9F%B3%E8%9A%B5%E7%94%B0_-_panoramio.jpg" target="_blank" rel="noopener">東石蚵田照片授權<span>lienyuan lee，CC BY 3.0</span></a>
+          <a href="https://commons.wikimedia.org/wiki/File:Oyster_Trellis_at_Dongshi_fishing_habour,_Chiayi_County_(Taiwan)_(cropped).jpg" target="_blank" rel="noopener">東石蚵棚照片授權<span>Mk2010，CC BY-SA 4.0</span></a>
+          <a href="https://commons.wikimedia.org/wiki/File:2023_Budai_Third_Fishing_Port_Ai.jpg" target="_blank" rel="noopener">布袋漁港照片授權<span>Taiwankengo，CC BY-SA 4.0</span></a>
         </div>
       </section>
     </main>
 
     <footer class="wrap">
-      行程更新：2026.09.23 · 封面：Taiwankengo（CC BY-SA 4.0）· 五分車：Leo20041201（CC BY-SA 4.0）<br />
+      行程更新：2026.09.23 · 景點照片皆附來源與公開授權，完整標示見上方查詢連結<br />
       這是家人共用的行程參考；時間、營業與活動內容以出發當日現場及官方公告為準。
     </footer>
   </body>

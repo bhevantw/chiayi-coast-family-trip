@@ -7,6 +7,9 @@
 - `index.html`：手機與桌機版行程頁。
 - `assets/high-heel-church.jpg`：高跟鞋教堂封面圖。
 - `assets/suantou-wufen-train.jpg`：蒜頭糖廠五分車照片。
+- `assets/dongshi-oyster-farm.jpg`：東石蚵田照片。
+- `assets/dongshi-oyster-trellis.jpg`：東石蚵棚與觀光船照片。
+- `assets/budai-fishing-port.jpg`：布袋第三漁港照片。
 
 ## 目前待確認
 
@@ -32,3 +35,6 @@
 
 - `high-heel-church.jpg`：Taiwankengo，Wikimedia Commons，CC BY-SA 4.0。來源：https://commons.wikimedia.org/wiki/File:2023_High-Heel_Wedding_Church.jpg
 - `suantou-wufen-train.jpg`：Leo20041201，Wikimedia Commons，CC BY-SA 4.0。來源：https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%B3%96%E4%BA%94%E5%88%86%E8%BB%8A.jpg
+- `dongshi-oyster-farm.jpg`：lienyuan lee，Wikimedia Commons，CC BY 3.0。來源：https://commons.wikimedia.org/wiki/File:Dongshi_Oyster_Farm_%E6%9D%B1%E7%9F%B3%E8%9A%B5%E7%94%B0_-_panoramio.jpg
+- `dongshi-oyster-trellis.jpg`：Mk2010，Wikimedia Commons，CC BY-SA 4.0。來源：https://commons.wikimedia.org/wiki/File:Oyster_Trellis_at_Dongshi_fishing_habour,_Chiayi_County_(Taiwan)_(cropped).jpg
+- `budai-fishing-port.jpg`：Taiwankengo，Wikimedia Commons，CC BY-SA 4.0。來源：https://commons.wikimedia.org/wiki/File:2023_Budai_Third_Fishing_Port_Ai.jpg
