@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#075a63" />
+    <meta
+      name="description"
+      content="嘉義海線親子放電一日遊：漁場萌寵、東石海鮮、高跟鞋教堂與好美里彩繪、布袋漁市、蒜頭糖廠五分車。"
+    />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="嘉義海線親子放電一日遊" />
+    <meta
+      property="og:description"
+      content="不踏浪、不下海：萌寵漁場互動、海鮮大餐、3D 美拍與復古五分車，一天玩遍嘉義海線。"
+    />
+    <meta property="og:url" content="https://bhevantw.github.io/chiayi-coast-family-trip/" />
+    <meta
+      property="og:image"
+      content="https://bhevantw.github.io/chiayi-coast-family-trip/assets/high-heel-church.jpg"
+    />
+    <meta property="og:image:alt" content="嘉義布袋高跟鞋教堂" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="嘉義海線親子放電一日遊" />
+    <meta
+      name="twitter:description"
+      content="漁場萌寵、東石海鮮、3D 美拍、布袋漁市與復古五分車。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://bhevantw.github.io/chiayi-coast-family-trip/assets/high-heel-church.jpg"
+    />
+    <title>嘉義海線親子放電一日遊</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23075a63'/%3E%3Cpath d='M8 36c8-8 15 8 24 0s16 8 24 0v14H8Z' fill='%236fd0c5'/%3E%3Ccircle cx='46' cy='17' r='8' fill='%23ffd166'/%3E%3Cpath d='M18 13h16v19H18z' fill='%23fff6df'/%3E%3Cpath d='M22 17h8M22 22h8M22 27h8' stroke='%23075a63' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --deep: #073f47;
+        --ocean: #087681;
+        --aqua: #55c6bd;
+        --foam: #eaf8f5;
+        --sand: #f4d8a6;
+        --sun: #ffd166;
+        --coral: #ed795f;
+        --ink: #17363a;
+        --muted: #597176;
+        --paper: #fffefa;
+        --line: #d4e7e4;
+        --shadow: 0 18px 50px rgba(7, 63, 71, 0.14);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 6% 7%, rgba(85, 198, 189, 0.15), transparent 27rem),
+          linear-gradient(180deg, #eefaf8 0, #fffefa 34%, #fdf5e9 100%);
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+        line-height: 1.65;
+      }
+      a { color: inherit; }
+      img { display: block; max-width: 100%; }
+      h1, h2, h3, p { margin: 0; }
+      button, a { -webkit-tap-highlight-color: transparent; }
+      .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+
+      .hero {
+        position: relative;
+        min-height: 600px;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        color: #fff;
+        background: var(--deep);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(4, 45, 51, 0.96) 0%, rgba(4, 45, 51, 0.77) 46%, rgba(4, 45, 51, 0.18) 80%),
+          linear-gradient(0deg, rgba(4, 45, 51, 0.85), transparent 54%),
+          url("assets/high-heel-church.jpg") center 48% / cover;
+      }
+      .hero .wrap { position: relative; padding: 70px 0 42px; }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        padding: 8px 13px;
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        font-size: 0.88rem;
+        font-weight: 900;
+        backdrop-filter: blur(8px);
+      }
+      .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); }
+      h1 {
+        max-width: 820px;
+        margin-top: 18px;
+        font-size: clamp(2.65rem, 8vw, 5.8rem);
+        line-height: 1.02;
+        letter-spacing: 0.01em;
+      }
+      .hero-lead {
+        max-width: 720px;
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+        line-height: 1.75;
+      }
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 30px;
+      }
+      .hero-meta > div {
+        min-height: 90px;
+        padding: 14px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 16px;
+        background: rgba(4, 53, 59, 0.65);
+        backdrop-filter: blur(10px);
+      }
+      .hero-meta span { display: block; color: #bfece6; font-size: 0.78rem; }
+      .hero-meta strong { display: block; margin-top: 6px; font-size: 1rem; line-height: 1.45; }
+
+      nav {
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 254, 250, 0.94);
+        backdrop-filter: blur(14px);
+      }
+      nav .wrap { display: flex; gap: 7px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
+      nav .wrap::-webkit-scrollbar { display: none; }
+      nav a {
+        flex: 0 0 auto;
+        padding: 9px 12px;
+        border-radius: 10px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 900;
+      }
+      nav a:hover, nav a:focus-visible { color: var(--deep); background: var(--foam); outline: none; }
+
+      main { padding: 34px 0 64px; }
+      section { scroll-margin-top: 76px; margin-top: 54px; }
+      section:first-child { margin-top: 0; }
+      .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 20px; }
+      .section-head p { max-width: 610px; color: var(--muted); }
+      .kicker { display: block; margin-bottom: 7px; color: var(--ocean); font-size: 0.8rem; font-weight: 950; letter-spacing: 0.11em; }
+      h2 { color: var(--deep); font-size: clamp(1.7rem, 4vw, 2.45rem); line-height: 1.18; }
+      h3 { color: var(--deep); font-size: 1.08rem; line-height: 1.35; }
+
+      .notice {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 18px 20px;
+        border: 1px solid #edcf91;
+        border-radius: 18px;
+        background: #fff8e8;
+        box-shadow: 0 10px 28px rgba(133, 86, 24, 0.08);
+      }
+      .notice-icon {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        color: #7b4b13;
+        background: var(--sun);
+        font-weight: 950;
+      }
+      .notice p { margin-top: 4px; color: #725b38; }
+
+      .overview {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .overview article {
+        min-height: 166px;
+        padding: 21px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 12px 36px rgba(7, 63, 71, 0.07);
+      }
+      .overview .number {
+        display: inline-grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 13px;
+        border-radius: 11px;
+        color: #fff;
+        background: var(--ocean);
+        font-size: 0.86rem;
+        font-weight: 950;
+      }
+      .overview p { margin-top: 8px; color: var(--muted); }
+
+      .choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .choice {
+        position: relative;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--paper);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .choice::after {
+        content: "";
+        position: absolute;
+        right: -25px;
+        bottom: -40px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: rgba(85, 198, 189, 0.12);
+      }
+      .choice-label {
+        display: inline-flex;
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: #fff;
+        background: var(--coral);
+        font-size: 0.78rem;
+        font-weight: 950;
+      }
+      .choice h3 { margin-top: 13px; font-size: 1.35rem; }
+      .choice p { position: relative; z-index: 1; margin-top: 9px; color: var(--muted); }
+      .mini-list { display: grid; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+      .mini-list li { position: relative; z-index: 1; padding-left: 18px; }
+      .mini-list li::before { content: ""; position: absolute; top: 0.75em; left: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--aqua); }
+
+      .timeline { position: relative; }
+      .timeline::before { content: ""; position: absolute; top: 4px; bottom: 18px; left: 99px; width: 2px; background: linear-gradient(var(--aqua), var(--sand)); }
+      .event { display: grid; grid-template-columns: 80px 22px 1fr; gap: 12px; align-items: start; margin-bottom: 16px; }
+      .event time { padding-top: 18px; color: var(--deep); font-size: 0.94rem; font-weight: 950; text-align: right; }
+      .marker { position: relative; z-index: 2; width: 14px; height: 14px; margin: 23px auto 0; border: 3px solid var(--paper); border-radius: 50%; background: var(--ocean); box-shadow: 0 0 0 2px var(--aqua); }
+      .event-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 34px rgba(7, 63, 71, 0.08);
+      }
+      .event-card p { margin-top: 7px; color: var(--muted); }
+      .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+      .status {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 9px;
+        border-radius: 999px;
+        color: #29666b;
+        background: var(--foam);
+        font-size: 0.75rem;
+        font-weight: 900;
+      }
+      .status.fixed { color: #7b4b13; background: #fff1ca; }
+      .status.pending { color: #8b4132; background: #ffe7df; }
+      .action {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 42px;
+        padding: 9px 13px;
+        border: 1px solid #afd5d1;
+        border-radius: 11px;
+        color: var(--deep);
+        background: #f3fbf9;
+        text-decoration: none;
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+      .action:hover, .action:focus-visible { color: #fff; background: var(--ocean); outline: none; }
+
+      .feature {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        border-radius: 26px;
+        overflow: hidden;
+        color: #fff;
+        background: var(--deep);
+        box-shadow: var(--shadow);
+      }
+      .feature figure { min-height: 420px; margin: 0; position: relative; }
+      .feature img { width: 100%; height: 100%; object-fit: cover; }
+      .feature figcaption { position: absolute; right: 10px; bottom: 9px; padding: 4px 8px; border-radius: 7px; background: rgba(0,0,0,0.62); font-size: 0.7rem; }
+      .feature-copy { display: grid; align-content: center; padding: clamp(28px, 5vw, 54px); }
+      .feature-copy .kicker { color: #92e5dd; }
+      .feature-copy h2 { color: #fff; }
+      .feature-copy > p { margin-top: 13px; color: #d3ece8; }
+      .feature-list { display: grid; gap: 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .feature-list li { padding-left: 18px; border-left: 3px solid var(--sun); }
+
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .panel {
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 34px rgba(7, 63, 71, 0.07);
+      }
+      .panel.alert { border-color: #f2c1b6; background: #fff8f5; }
+      .panel ul { display: grid; gap: 15px; margin: 17px 0 0; padding: 0; list-style: none; }
+      .panel li { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+      .panel li:last-child { padding-bottom: 0; border-bottom: 0; }
+      .panel li strong, .panel li span { display: block; }
+      .panel li span { margin-top: 4px; color: var(--muted); }
+
+      .source-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .source-list a {
+        padding: 15px 16px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        color: var(--deep);
+        background: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        font-weight: 900;
+      }
+      .source-list a:hover, .source-list a:focus-visible { border-color: var(--aqua); background: var(--foam); outline: none; }
+      .source-list span { display: block; margin-top: 3px; color: var(--muted); font-size: 0.8rem; font-weight: 500; }
+      footer { padding: 0 0 34px; color: var(--muted); font-size: 0.82rem; text-align: center; }
+
+      @media (max-width: 760px) {
+        .wrap { width: min(100% - 24px, 680px); }
+        .hero { min-height: 690px; }
+        .hero::before {
+          background:
+            linear-gradient(0deg, rgba(4, 45, 51, 0.96) 0%, rgba(4, 45, 51, 0.74) 58%, rgba(4, 45, 51, 0.28) 100%),
+            url("assets/high-heel-church.jpg") 61% center / cover;
+        }
+        .hero .wrap { padding: 110px 0 26px; }
+        h1 { font-size: clamp(2.55rem, 14vw, 4.2rem); }
+        .hero-meta { grid-template-columns: 1fr 1fr; }
+        .hero-meta > div { min-height: 82px; }
+        .section-head { display: block; }
+        .section-head p { margin-top: 10px; }
+        .overview, .choice-grid, .two-col, .source-list { grid-template-columns: 1fr; }
+        .timeline::before { left: 9px; }
+        .event { grid-template-columns: 22px 1fr; gap: 10px; }
+        .event time { grid-column: 2; padding: 0 0 2px; text-align: left; font-size: 0.82rem; }
+        .marker { grid-column: 1; grid-row: 1 / span 2; margin-top: 5px; }
+        .event-card { grid-column: 2; grid-template-columns: 1fr; padding: 17px; }
+        .action { width: 100%; }
+        .feature { grid-template-columns: 1fr; }
+        .feature figure { min-height: 290px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <span class="eyebrow">嘉義海線 · 親子一日遊</span>
+        <h1>吹海風、吃海鮮，<br />一路玩到五分車</h1>
+        <p class="hero-lead">不下海、不踏浪，也能把漁村體驗、萌寵互動、3D 美拍和復古鐵道一次收進回憶裡。</p>
+        <div class="hero-meta" aria-label="行程基本資料">
+          <div><span>日期</span><strong>待確認</strong></div>
+          <div><span>集合</span><strong>09:00 嘉義市區</strong></div>
+          <div><span>交通</span><strong>遊覽車 · 全程平地</strong></div>
+          <div><span>返抵</span><strong>18:00 嘉義市區</strong></div>
+        </div>
+      </div>
+    </header>
+
+    <nav aria-label="頁面導覽">
+      <div class="wrap">
+        <a href="#overview">亮點</a>
+        <a href="#choice">上午二選一</a>
+        <a href="#schedule">完整行程</a>
+        <a href="#train">五分車</a>
+        <a href="#tips">行前提醒</a>
+        <a href="#sources">查詢連結</a>
+      </div>
+    </nav>
+
+    <main class="wrap">
+      <section aria-label="待確認事項">
+        <div class="notice">
+          <span class="notice-icon" aria-hidden="true">!</span>
+          <div>
+            <h3>出發前先確認三件事</h3>
+            <p>出遊日期、上午體驗場地（二選一）、蒜頭糖廠五分車班次。向禾活動採預約制；五分車班次依平假日與預約狀況不同。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview">
+        <div class="section-head">
+          <div><span class="kicker">WHY THIS DAY WORKS</span><h2>小孩有得玩，大人也不累</h2></div>
+          <p>把互動體驗、海鮮、拍照與懷舊鐵道排在同一天，活動一路換場景，車上就是最好的休息時間。</p>
+        </div>
+        <div class="overview">
+          <article><span class="number">01</span><h3>安全互動</h3><p>划環保船、撈海菜、摸文蛤，或改走萌寵餵食路線；以不下海、不踏浪為原則。</p></article>
+          <article><span class="number">02</span><h3>海味補能量</h3><p>中午吃東石海鮮，下午再到布袋漁市補一輪小吃，大人也能順手買伴手禮。</p></article>
+          <article><span class="number">03</span><h3>復古收尾</h3><p>最後搭五分車看田園、聽導覽，再用台糖冰棒替今天畫下甜甜句點。</p></article>
+        </div>
+      </section>
+
+      <section id="choice">
+        <div class="section-head">
+          <div><span class="kicker">09:30–11:30 · PICK ONE</span><h2>上午主場，出發前二選一</h2></div>
+          <p>兩個選項都需要先確認營業與團體安排；不要同時塞進兩小時，孩子才玩得盡興。</p>
+        </div>
+        <div class="choice-grid">
+          <article class="choice">
+            <span class="choice-label">A · 漁村體驗</span>
+            <h3>向禾休閒漁場</h3>
+            <p>穿救生衣搭環保船、撈海菜、摸文蛤，還能認識東石養殖漁業。</p>
+            <ul class="mini-list"><li>互動感最強，適合愛動手的孩子</li><li>預約制；體驗內容與烤蚵依現場方案</li><li>建議帶小毛巾，衣物不必特別更換</li></ul>
+          </article>
+          <article class="choice">
+            <span class="choice-label">B · 萌寵餵食</span>
+            <h3>咩咩上樹萌寵樂園</h3>
+            <p>近距離看看羊咩咩、水豚等動物，節奏比漁場輕鬆，也比較適合幼齡孩子。</p>
+            <ul class="mini-list"><li>不玩水、移動較單純</li><li>動物互動依園區當日開放為準</li><li>餵食後記得確實洗手</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="schedule">
+        <div class="section-head">
+          <div><span class="kicker">ONE-DAY TIMELINE</span><h2>今天照這個節奏玩</h2></div>
+          <p>時間沿用目前規畫；有兩段較緊湊，頁面已標出優先保留的活動，臨場更好取捨。</p>
+        </div>
+        <div class="timeline">
+          <article class="event">
+            <time>09:00</time><span class="marker"></span>
+            <div class="event-card"><div><h3>嘉義市區集合出發</h3><p>搭遊覽車走台 82 線往海線。上車先分好座位、確認人數，約 25–30 分鐘抵達第一站。</p><div class="meta"><span class="status fixed">固定 · 09:00</span><span class="status">車程約 25–30 分</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%98%89%E7%BE%A9%E5%B8%82" target="_blank" rel="noopener">開啟嘉義市區</a></div>
+          </article>
+
+          <article class="event">
+            <time>09:30–11:30</time><span class="marker"></span>
+            <div class="event-card"><div><h3>向禾休閒漁場／咩咩上樹</h3><p>上午主活動二選一。選向禾就玩划船、撈海菜與摸文蛤；選咩咩上樹則改為萌寵餵食與親子散步。</p><div class="meta"><span class="status pending">待選定 · 需先聯繫</span><span class="status">停留 2 小時</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%90%91%E7%A6%BE%E4%BC%91%E9%96%92%E6%BC%81%E5%A0%B4" target="_blank" rel="noopener">向禾導航</a></div>
+          </article>
+
+          <article class="event">
+            <time>11:50–13:20</time><span class="marker"></span>
+            <div class="event-card"><div><h3>東石在地海鮮大餐</h3><p>現烤鮮蚵、海鮮炒麵、酥炸花枝丸與蚵仔煎。餐廳尚未指定，團體出發前先訂位並確認兒童座椅。</p><div class="meta"><span class="status pending">餐廳待確認</span><span class="status">用餐 90 分鐘</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E7%9F%B3%E6%B5%B7%E9%AE%AE%E9%A4%90%E5%BB%B3" target="_blank" rel="noopener">找東石海鮮</a></div>
+          </article>
+
+          <article class="event">
+            <time>13:45–14:50</time><span class="marker"></span>
+            <div class="event-card"><div><h3>高跟鞋教堂＋好美里 3D 彩繪村</h3><p>這段是快速拍照行程：先看藍色玻璃高跟鞋，再到好美里找鯊魚破牆地畫。兩地移動會壓縮停留時間，若午餐延誤就保留一站即可。</p><div class="meta"><span class="status fixed">緊湊段 · 65 分鐘</span><span class="status">延誤時二選一</span></div></div><a class="action" href="https://www.google.com/maps/dir/?api=1&origin=%E9%AB%98%E8%B7%9F%E9%9E%8B%E6%95%99%E5%A0%82&destination=%E5%A5%BD%E7%BE%8E%E9%87%8C3D%E5%BD%A9%E7%B9%AA%E6%9D%91&travelmode=driving" target="_blank" rel="noopener">兩站路線</a></div>
+          </article>
+
+          <article class="event">
+            <time>15:00–15:50</time><span class="marker"></span>
+            <div class="event-card"><div><h3>布袋觀光漁市 · 海味下午茶</h3><p>小朋友挑花枝丸、雙胞胎或海鹽霜淇淋，大人採買海產伴手禮。記得 15:45 前集合，不把五分車時間吃掉。</p><div class="meta"><span class="status fixed">集合 · 15:45</span><span class="status">停留 50 分鐘</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E8%A2%8B%E8%A7%80%E5%85%89%E6%BC%81%E5%B8%82" target="_blank" rel="noopener">漁市導航</a></div>
+          </article>
+
+          <article class="event">
+            <time>16:30–17:30</time><span class="marker"></span>
+            <div class="event-card"><div><h3>蒜頭糖廠蔗埕文化園區</h3><p>搭復古五分車漫遊田園、聽導覽，回到園區再吃一枝台糖冰棒。班次與行駛路線依日期不同，務必先確認，不把「16:30」當成已訂妥班次。</p><div class="meta"><span class="status pending">班次待確認／預約</span><span class="status">園區全年開放</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80" target="_blank" rel="noopener">糖廠導航</a></div>
+          </article>
+
+          <article class="event">
+            <time>17:30–18:00</time><span class="marker"></span>
+            <div class="event-card"><div><h3>上車休息・平安賦歸</h3><p>車上補眠吹冷氣，清點人數與伴手禮，預計 18:00 回到嘉義市區解散。</p><div class="meta"><span class="status fixed">預計 · 18:00 抵達</span><span class="status">實際依路況</span></div></div><a class="action" href="https://www.google.com/maps/dir/?api=1&origin=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80&destination=%E5%98%89%E7%BE%A9%E5%B8%82&travelmode=driving" target="_blank" rel="noopener">返程路線</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature" id="train">
+        <figure>
+          <img src="assets/suantou-wufen-train.jpg" alt="蒜頭糖廠園區內的台糖五分車" loading="lazy" />
+          <figcaption>Leo20041201／Wikimedia Commons，CC BY-SA 4.0</figcaption>
+        </figure>
+        <div class="feature-copy">
+          <span class="kicker">THE SWEET FINALE</span>
+          <h2>讓五分車慢慢替今天收尾</h2>
+          <p>老車站、窄軌、田園風景和台糖冰棒，是孩子眼中的小火車冒險，也是大人的懷舊時光。</p>
+          <ul class="feature-list">
+            <li><strong>先問班次：</strong>日期未定，平假日發車與預約規則可能不同。</li>
+            <li><strong>準時集合：</strong>布袋漁市不逗留到最後一刻，保留約 40 分鐘車程。</li>
+            <li><strong>沒搭到也有備案：</strong>改逛百年車站、鐵道文物與老建築，再吃冰休息。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tips">
+        <div class="section-head">
+          <div><span class="kicker">PACK LIGHT</span><h2>帶這些，就能輕鬆玩</h2></div>
+          <p>全程平地為主，不用準備整套換洗衣物；海邊日照與風勢才是最需要留意的兩件事。</p>
+        </div>
+        <div class="two-col">
+          <article class="panel">
+            <h3>隨身小包</h3>
+            <ul>
+              <li><strong>遮陽帽、太陽眼鏡、防曬</strong><span>沿海遮蔭有限，活動前就先補防曬。</span></li>
+              <li><strong>薄外套</strong><span>遊覽車冷氣與傍晚海風都用得上。</span></li>
+              <li><strong>小毛巾、防蚊液、濕紙巾</strong><span>漁場或萌寵互動後方便清潔。</span></li>
+              <li><strong>水壺與好走的鞋</strong><span>園區都不難走，但一天會站站走動。</span></li>
+            </ul>
+          </article>
+          <article class="panel alert">
+            <h3>帶隊者出發前</h3>
+            <ul>
+              <li><strong>確認上午 A／B 方案</strong><span>向禾採預約制；咩咩上樹也要重查營業與票務。</span></li>
+              <li><strong>訂東石午餐</strong><span>團體桌菜、兒童座椅與忌口一起確認。</span></li>
+              <li><strong>確認五分車</strong><span>以台糖當日公告或電話回覆為準。</span></li>
+              <li><strong>保留 15–20 分鐘彈性</strong><span>若午餐或拍照延誤，好美里與高跟鞋教堂直接二選一。</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="section-head">
+          <div><span class="kicker">CHECKED 2026.09.23</span><h2>出發前快速重查</h2></div>
+          <p>行程內容依目前提供的版本整理；營業、體驗與發車資訊仍以店家及官方最新公告為準。</p>
+        </div>
+        <div class="source-list">
+          <a href="https://familytour.chiayi.travel/event/%E3%80%90%E5%85%A8%E5%B9%B4%E9%BD%A1%E3%80%91%E6%9D%B1%E7%9F%B3%EF%BD%9C%E6%BC%81%E5%A1%AD%E9%81%8B%E5%8B%95%E6%9C%83x%E5%B0%8F%E5%B0%8F%E6%B5%B7%E7%9B%9C%E7%8E%8B%EF%BD%9C%E9%A0%90%E7%B4%84%E5%88%B6/" target="_blank" rel="noopener">向禾休閒漁場<span>官方親子旅活動、預約與聯絡資訊</span></a>
+          <a href="https://www.meimeitree.com.tw/product.html" target="_blank" rel="noopener">咩咩上樹萌寵樂園<span>園區服務與動物展演許可資訊</span></a>
+          <a href="https://familytour.chiayi.travel/news-20240612-2/" target="_blank" rel="noopener">嘉義縣親子旅<span>高跟鞋教堂、好美里與布袋親子景點</span></a>
+          <a href="https://www.taisugar.com.tw/Chinese/Attractions_detail.aspx?n=10048&p=0&s=77" target="_blank" rel="noopener">台糖蒜頭糖廠<span>園區介紹、地址與五分車資訊</span></a>
+          <a href="https://www.cwa.gov.tw/" target="_blank" rel="noopener">中央氣象署<span>出發前查嘉義沿海天氣、風勢與雷達回波</span></a>
+          <a href="https://commons.wikimedia.org/wiki/File:2023_High-Heel_Wedding_Church.jpg" target="_blank" rel="noopener">封面照片授權<span>Taiwankengo，CC BY-SA 4.0</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      行程更新：2026.09.23 · 封面：Taiwankengo（CC BY-SA 4.0）· 五分車：Leo20041201（CC BY-SA 4.0）<br />
+      這是家人共用的行程參考；時間、營業與活動內容以出發當日現場及官方公告為準。
+    </footer>
+  </body>
+</html>
