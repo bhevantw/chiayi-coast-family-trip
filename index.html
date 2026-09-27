@@ -77,6 +77,7 @@
       .photo { grid-area: photo; margin: 0; overflow: hidden; border-radius: 17px; background: #e6efed; }
       .photo img { width: 100%; height: 100%; min-height: 230px; object-fit: cover; }
       .photo figcaption { padding: 8px 10px; background: #eef5f3; color: #5d716e; font-size: .7rem; line-height: 1.45; }
+      .photo figcaption a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 2px; }
       .action { grid-area: action; justify-self: start; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 9px 15px; border-radius: 12px; background: var(--deep); color: var(--white); font-size: .86rem; font-weight: 900; text-decoration: none; }
       .route-note { margin-top: 8px; color: var(--deep) !important; font-size: .87rem; font-weight: 780; }
       .reminder-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
@@ -85,11 +86,6 @@
       .reminder p { margin-bottom: 0; color: var(--muted); }
       .callout { margin-top: 18px; padding: 18px 20px; border-left: 5px solid var(--coral); border-radius: 10px 18px 18px 10px; background: #fff1ed; color: #69463f; }
       .callout strong { color: #8e3e2e; }
-      details { border: 1px solid var(--line); border-radius: 18px; background: var(--white); }
-      summary { min-height: 52px; padding: 14px 18px; cursor: pointer; color: var(--deep); font-weight: 900; }
-      .source-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 9px; padding: 0 18px 18px; }
-      .source-list a { padding: 12px; border-radius: 12px; background: #f1f7f5; color: var(--deep); font-size: .82rem; font-weight: 800; text-decoration: none; }
-      .source-list a span { display: block; margin-top: 2px; color: var(--muted); font-size: .74rem; font-weight: 600; }
       footer { padding: 24px 0 42px; color: var(--muted); font-size: .78rem; text-align: center; }
       @media (max-width: 780px) {
         section { padding: 56px 0; } .wrap { width: min(100% - 28px, 680px); } .hero { min-height: 720px; }
@@ -103,10 +99,10 @@
         .dot { grid-row: 1 / span 2; margin-top: 7px; }
         .event-card, .event-card.has-photo { grid-column: 2; grid-template-columns: 1fr; grid-template-areas: "copy" "photo" "action"; padding: 17px; }
         .event-card:not(.has-photo) { grid-template-areas: none; } .photo img { min-height: 210px; max-height: 270px; } .action { width: 100%; }
-        .reminder-grid, .source-list { grid-template-columns: 1fr; }
+        .reminder-grid { grid-template-columns: 1fr; }
       }
       @media print {
-        .nav, .hero-actions, .action, details { display: none !important; } body { background: #fff; font-size: 11pt; }
+        .nav, .hero-actions, .action { display: none !important; } body { background: #fff; font-size: 11pt; }
         .hero { min-height: 0; color: #111; background: #fff; } .hero::before, .hero::after { display: none; }
         .hero .wrap { padding: 20px 0; } .hero .eyebrow, .hero-lead, .hero-meta span { color: #333; }
         .hero-meta > div, .event-card, .overview-card { color: #111; background: #fff; box-shadow: none; } section { padding: 22px 0; } .photo img { min-height: 130px; }
@@ -131,7 +127,7 @@
         </div>
       </div>
     </header>
-    <nav class="nav" aria-label="頁面導覽"><div class="wrap"><a href="#overview">整日總覽</a><a href="#schedule">詳細行程</a><a href="#reminders">行前提醒</a><a href="#sources">來源</a></div></nav>
+    <nav class="nav" aria-label="頁面導覽"><div class="wrap"><a href="#overview">整日總覽</a><a href="#schedule">詳細行程</a><a href="#reminders">行前提醒</a></div></nav>
     <main>
       <section id="overview">
         <div class="wrap">
@@ -158,7 +154,7 @@
               <time>10:00<br />– 11:00</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
                 <div class="event-copy"><h3>第一站｜好美里 3D 彩繪村</h3><p>沿著漁村小徑尋找海洋生物與立體壁畫；團體可分小隊拍照，10:50 回到集合點，保留上車時間。</p><div class="meta"><span class="chip accent">停留 60 分鐘</span><span class="chip">戶外散步</span></div><p class="route-note">下一站車程與上下車緩衝：約 20 分鐘</p></div>
-                <figure class="photo"><img src="assets/haomeili-3d-village.jpg" alt="好美里 3D 彩繪村的彩繪牆與立體互動畫面" width="1024" height="683" /><figcaption>好美里 3D 彩繪村 · 雲嘉南濱海國家風景區管理處／政府網站資料開放宣告</figcaption></figure>
+                <figure class="photo"><img src="assets/haomeili-3d-village.jpg" alt="好美里 3D 彩繪村的彩繪牆與立體互動畫面" width="1024" height="683" /><figcaption>好美里 3D 彩繪村 · <a href="https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/492" target="_blank" rel="noopener">雲嘉南濱海國家風景區管理處</a>／<a href="https://www.swcoast-nsa.gov.tw/zh-tw/gwoia" target="_blank" rel="noopener">政府網站資料開放宣告</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%A5%BD%E7%BE%8E%E9%87%8C3D%E5%BD%A9%E7%B9%AA%E6%9D%91" target="_blank" rel="noopener">景點導航</a>
               </div>
             </article>
@@ -166,7 +162,7 @@
               <time>11:20<br />– 11:50</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
                 <div class="event-copy"><h3>第二站｜高跟鞋教堂</h3><p>以巨型藍色玻璃高跟鞋為主角拍團體照；停留只有 30 分鐘，建議先合照、再自由取景。</p><div class="meta"><span class="chip accent">停留 30 分鐘</span><span class="chip">快速拍照站</span></div><p class="route-note">11:50 集合上車，約 10 分鐘到餐廳</p></div>
-                <figure class="photo"><img src="assets/high-heel-church.jpg" alt="布袋高跟鞋教堂的藍色玻璃外觀" width="1920" height="1080" loading="lazy" /><figcaption>高跟鞋教堂 · Taiwankengo／CC BY-SA 4.0</figcaption></figure>
+                <figure class="photo"><img src="assets/high-heel-church.jpg" alt="布袋高跟鞋教堂的藍色玻璃外觀" width="1920" height="1080" loading="lazy" /><figcaption>高跟鞋教堂 · <a href="https://commons.wikimedia.org/wiki/File:2023_High-Heel_Wedding_Church.jpg" target="_blank" rel="noopener">Taiwankengo</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E8%A2%8B%E9%AB%98%E8%B7%9F%E9%9E%8B%E6%95%99%E5%A0%82" target="_blank" rel="noopener">景點導航</a>
               </div>
             </article>
@@ -174,7 +170,7 @@
               <time>12:00<br />– 13:30</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
                 <div class="event-copy"><h3>第三站｜布袋英賓海產餐廳</h3><p>地址：嘉義縣布袋鎮永安里 359 號。享用團體海鮮桌菜；34 人建議事前確認桌數、兒童椅、素食與過敏需求，13:20 前完成洗手間與上車準備。</p><div class="meta"><span class="chip accent">用餐 90 分鐘</span><span class="chip">團體訂位需確認</span></div><p class="route-note">下一站車程與上下車緩衝：約 40 分鐘</p></div>
-                <figure class="photo"><img src="assets/taiwanese-seafood-banquet.jpg" alt="包含蝦、烏魚子與海鮮丸的台式海鮮桌菜" width="1920" height="1061" loading="lazy" /><figcaption>台式海鮮桌菜示意，實際菜色依餐廳安排 · WikiLaurent／CC BY-SA 3.0</figcaption></figure>
+                <figure class="photo"><img src="assets/taiwanese-seafood-banquet.jpg" alt="包含蝦、烏魚子與海鮮丸的台式海鮮桌菜" width="1920" height="1061" loading="lazy" /><figcaption>台式海鮮桌菜示意，實際菜色依餐廳安排 · <a href="https://commons.wikimedia.org/wiki/File:Taiwanese_cuisine.jpg" target="_blank" rel="noopener">WikiLaurent</a>／<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps?q=625%E5%98%89%E7%BE%A9%E7%B8%A3%E5%B8%83%E8%A2%8B%E9%8E%AE%E6%B0%B8%E5%AE%89%E9%87%8C359%E8%99%9F%E8%8B%B1%E8%B3%93%E6%B5%B7%E7%94%A2%E9%A4%90%E5%BB%B3&amp;ftid=0x346e82f842923ca3:0xc3f62b81f9e52aa7" target="_blank" rel="noopener">餐廳導航</a>
               </div>
             </article>
@@ -182,7 +178,7 @@
               <time>14:10<br />– 15:40</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
                 <div class="event-copy"><h3>第四站｜咩咩上樹萌寵樂園</h3><p>看羊咩咩、羊駝、小兔子等萌寵，也能體驗動物主題遊戲；請依現場人員指示餵食，不拿自己的食物餵動物。</p><div class="meta"><span class="chip accent">停留 90 分鐘</span><span class="chip">團體票務需確認</span></div><p class="route-note">15:30 開始集合，下一站車程約 10 分鐘</p></div>
-                <figure class="photo"><img src="https://www.meimeitree.com.tw/userfiles/images/20250908034229393.jpg" alt="咩咩上樹萌寵樂園內正在吃草的兩隻袋鼠" width="1000" height="997" loading="lazy" referrerpolicy="no-referrer" /><figcaption>咩咩上樹萌寵樂園官方網站圖片（嵌入）· © 咩咩上樹萌寵樂園</figcaption></figure>
+                <figure class="photo"><img src="https://www.meimeitree.com.tw/userfiles/images/20250908034229393.jpg" alt="咩咩上樹萌寵樂園內正在吃草的兩隻袋鼠" width="1000" height="997" loading="lazy" referrerpolicy="no-referrer" /><figcaption><a href="https://www.meimeitree.com.tw/" target="_blank" rel="noopener">咩咩上樹萌寵樂園官方網站圖片</a>（嵌入）· © 咩咩上樹萌寵樂園</figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%92%A9%E5%92%A9%E4%B8%8A%E6%A8%B9%E8%90%8C%E5%AF%B5%E6%A8%82%E5%9C%92" target="_blank" rel="noopener">園區導航</a>
               </div>
             </article>
@@ -190,7 +186,7 @@
               <time>15:50<br />– 17:20</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
                 <div class="event-copy"><h3>第五站｜蒜頭糖廠蔗埕文化園區</h3><p>逛百年糖廠、看復古車站，再搭五分車賞田園。現行假日故宮南院線建議搭 16:20 蒜頭站發車、16:40 回程，來回約 45 分鐘。</p><div class="meta"><span class="chip accent">停留 90 分鐘</span><span class="chip">建議 16:20 班次</span></div><p class="route-note">34 人請主辦先向園區確認當日班次、團體安排與餘位</p></div>
-                <figure class="photo"><img src="assets/suantou-wufen-train.jpg" alt="蒜頭糖廠園區內的台糖五分車" width="1920" height="1440" loading="lazy" /><figcaption>蒜頭糖廠五分車 · Leo20041201／CC BY-SA 4.0</figcaption></figure>
+                <figure class="photo"><img src="assets/suantou-wufen-train.jpg" alt="蒜頭糖廠園區內的台糖五分車" width="1920" height="1440" loading="lazy" /><figcaption>蒜頭糖廠五分車 · <a href="https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%B3%96%E4%BA%94%E5%88%86%E8%BB%8A.jpg" target="_blank" rel="noopener">Leo20041201</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80" target="_blank" rel="noopener">園區導航</a>
               </div>
             </article>
@@ -212,19 +208,6 @@
           </div>
           <div class="callout"><strong>主辦出發前再確認：</strong>英賓海產餐廳 34 人桌菜、咩咩上樹團體入園，以及蒜頭糖廠 16:20 五分車班次與團體安排。頁面未把這三項標示為已訂妥。</div>
         </div>
-      </section>
-      <section id="sources">
-        <div class="wrap"><details><summary>官方資訊與照片來源（查核：2026.09.26）</summary><div class="source-list">
-          <a href="https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/492" target="_blank" rel="noopener">好美里 3D 彩繪村<span>官方景點資訊與照片</span></a>
-          <a href="https://www.swcoast-nsa.gov.tw/zh-tw/gwoia" target="_blank" rel="noopener">雲嘉南資料開放宣告<span>好美里照片使用條件</span></a>
-          <a href="https://www.meimeitree.com.tw/" target="_blank" rel="noopener">咩咩上樹官方網站<span>園區內容與官方嵌入照片</span></a>
-          <a href="https://www.meimeitree.com.tw/faq.html" target="_blank" rel="noopener">咩咩上樹常見問題<span>團體餐食與動物區規則</span></a>
-          <a href="https://www.facebook.com/yingbin3472335/" target="_blank" rel="noopener">英賓海產餐廳官方粉絲頁<span>餐廳最新公告</span></a>
-          <a href="https://www.taisugar.com.tw/chinese/Attractions_detail.aspx?n=10048&p=77&s=89" target="_blank" rel="noopener">台糖五分車資訊<span>假日班次、票價與團體規定</span></a>
-          <a href="https://commons.wikimedia.org/wiki/File:2023_High-Heel_Wedding_Church.jpg" target="_blank" rel="noopener">高跟鞋教堂照片<span>Taiwankengo／CC BY-SA 4.0</span></a>
-          <a href="https://commons.wikimedia.org/wiki/File:Taiwanese_cuisine.jpg" target="_blank" rel="noopener">台式海鮮桌菜照片<span>WikiLaurent／CC BY-SA 3.0</span></a>
-          <a href="https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%B3%96%E4%BA%94%E5%88%86%E8%BB%8A.jpg" target="_blank" rel="noopener">蒜頭五分車照片<span>Leo20041201／CC BY-SA 4.0</span></a>
-        </div></details></div>
       </section>
     </main>
     <footer><div class="wrap">行程更新：2026.09.27 · 2026.10.25 嘉義海線親子團體一日遊</div></footer>
