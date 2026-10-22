@@ -7,8 +7,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:title" content="嘉義海線親子一日遊｜10/25 團體行程" />
-    <meta property="og:description" content="34 人同行，09:00 民生北路集合；彩繪村、海鮮桌菜、萌寵互動與復古五分車一次玩。" />
-    <meta property="og:image" content="assets/high-heel-church.jpg" />
+    <meta property="og:description" content="10/25 嘉義海線一日遊，08:50 民生北路集合、09:00 出發；彩繪漁村、海鮮午餐、萌寵與百年糖廠。" />
+    <meta property="og:image" content="https://bhevantw.github.io/chiayi-coast-family-trip/assets/high-heel-church.jpg" />
     <meta property="og:image:alt" content="嘉義布袋高跟鞋教堂" />
     <meta name="theme-color" content="#0c6f69" />
     <title>嘉義海線親子一日遊｜2026.10.25</title>
@@ -36,10 +36,10 @@
       h2 { margin-bottom: 12px; font-size: clamp(1.55rem, 4vw, 2.35rem); line-height: 1.24; letter-spacing: -.03em; }
       h3 { margin-bottom: 6px; font-size: 1.15rem; line-height: 1.45; }
       section { padding: 72px 0; scroll-margin-top: 68px; }
-      .hero { position: relative; overflow: hidden; min-height: 650px; color: var(--white); background: #075f5a; isolation: isolate; }
+      .hero { position: relative; overflow: hidden; min-height: 0; color: var(--white); background: #075f5a; isolation: isolate; }
       .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(4,57,55,.94) 0%, rgba(5,70,66,.78) 48%, rgba(5,70,66,.24) 100%), url("assets/high-heel-church.jpg") center 42% / cover; }
       .hero::after { content: ""; position: absolute; inset: auto -8% -180px; z-index: -1; height: 290px; border-radius: 50% 50% 0 0; background: var(--paper); }
-      .hero .wrap { padding: 82px 0 145px; }
+      .hero .wrap { padding: 48px 0 80px; }
       .hero .eyebrow { color: #c9fff7; }
       .hero-lead { max-width: 650px; margin-bottom: 28px; color: #ecfffc; font-size: clamp(1.02rem, 2.4vw, 1.22rem); }
       .hero-meta { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; max-width: 850px; }
@@ -88,9 +88,9 @@
       .callout strong { color: #8e3e2e; }
       footer { padding: 24px 0 42px; color: var(--muted); font-size: .78rem; text-align: center; }
       @media (max-width: 780px) {
-        section { padding: 56px 0; } .wrap { width: min(100% - 28px, 680px); } .hero { min-height: 720px; }
+        section { padding: 56px 0; } .wrap { width: min(100% - 28px, 680px); } .hero { min-height: 0; }
         .hero::before { background: linear-gradient(180deg, rgba(4,57,55,.74) 0%, rgba(4,57,55,.92) 58%, #075f5a 100%), url("assets/high-heel-church.jpg") 62% center / cover; }
-        .hero .wrap { padding: 76px 0 148px; } .hero-meta { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        .hero .wrap { padding: 32px 0 62px; } .hero-meta { grid-template-columns: repeat(2, minmax(0,1fr)); }
         .hero-meta > div { min-width: 0; min-height: 82px; padding: 14px; } .hero-meta strong { overflow-wrap: anywhere; }
         .section-head { display: block; } .section-head p { margin-top: 10px; }
         .overview-grid { grid-template-columns: 1fr; } .overview-card { min-height: 128px; }
@@ -107,6 +107,24 @@
         .hero .wrap { padding: 20px 0; } .hero .eyebrow, .hero-lead, .hero-meta span { color: #333; }
         .hero-meta > div, .event-card, .overview-card { color: #111; background: #fff; box-shadow: none; } section { padding: 22px 0; } .photo img { min-height: 130px; }
       }
+
+      .day-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: var(--white); }
+      .day-list li + li { border-top: 1px solid var(--line); }
+      .day-list a { display: grid; grid-template-columns: 145px 1fr 20px; gap: 14px; align-items: center; min-height: 56px; padding: 12px 20px; text-decoration: none; }
+      .day-list a:hover { background: var(--aqua-soft); }
+      .day-list a > span:first-child { color: var(--deep); font-size: .88rem; font-weight: 800; }
+      .event { scroll-margin-top: 82px; }
+      a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+      .photo img { height: 250px; min-height: 0; }
+      @media (max-width: 780px) {
+        .day-list a { grid-template-columns: 108px 1fr 12px; gap: 8px; padding: 12px; }
+        .day-list strong { font-size: .92rem; }
+        .day-list a > span:first-child { font-size: .78rem; }
+        .hero-lead { margin-bottom: 18px; }
+        .hero-actions { margin-top: 18px; }
+        .photo img { height: 220px; min-height: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
   </head>
   <body>
@@ -114,11 +132,11 @@
       <div class="wrap">
         <p class="eyebrow">Chiayi family day trip</p>
         <h1>嘉義海線<br />親子一日遊</h1>
-        <p class="hero-lead">從 3D 彩繪漁村一路玩到萌寵樂園與復古五分車，34 人一起輕鬆出發、準時回家。</p>
+        <p class="hero-lead">走進彩繪漁村、一起吃海鮮，再到萌寵樂園與百年糖廠，慢慢收藏一天的回憶。</p>
         <div class="hero-meta" aria-label="行程基本資料">
           <div><span>日期</span><strong>2026.10.25<br />星期日</strong></div>
-          <div><span>集合出發</span><strong>09:00<br />請提早 10 分鐘到</strong></div>
-          <div><span>同行人數</span><strong>共 34 人<br />遊覽車移動</strong></div>
+          <div><span>集合・出發</span><strong>08:50 集合<br />09:00 發車</strong></div>
+          <div><span>回程</span><strong>預計 18:00<br />原上車處解散</strong></div>
           <div><span>上車地點</span><strong>嘉義市<br />民生北路 256 號</strong></div>
         </div>
         <div class="hero-actions">
@@ -127,89 +145,70 @@
         </div>
       </div>
     </header>
-    <nav class="nav" aria-label="頁面導覽"><div class="wrap"><a href="#overview">整日總覽</a><a href="#schedule">詳細行程</a><a href="#reminders">行前提醒</a></div></nav>
+    <nav class="nav" aria-label="頁面導覽"><div class="wrap"><a href="#overview">整日總覽</a><a href="#schedule">詳細行程</a></div></nav>
     <main>
       <section id="overview">
         <div class="wrap">
-          <div class="section-head"><div><p class="eyebrow">Day at a glance</p><h2>今天會怎麼玩</h2></div><p>停留時間已依團體版固定；移動空檔也保留下車、集合與清點人數的緩衝。</p></div>
-          <div class="overview-grid">
-            <article class="overview-card" data-no="01"><time>09:00</time><h3>民生北路集合出發</h3><p>34 人確認到齊後搭遊覽車前往海線。</p></article>
-            <article class="overview-card" data-no="02"><time>10:00–11:00</time><h3>好美里 3D 彩繪村</h3><p>跟著海洋主題壁畫散步、拍立體互動照。</p></article>
-            <article class="overview-card" data-no="03"><time>11:20–11:50</time><h3>高跟鞋教堂</h3><p>停留 30 分鐘，快速拍下藍色玻璃地標。</p></article>
-            <article class="overview-card" data-no="04"><time>12:00–13:30</time><h3>英賓海產餐廳</h3><p>團體海鮮桌菜，吃飽再往萌寵樂園出發。</p></article>
-            <article class="overview-card" data-no="05"><time>14:10–15:40</time><h3>咩咩上樹萌寵樂園</h3><p>和羊咩咩、羊駝、小兔子近距離互動。</p></article>
-            <article class="overview-card" data-no="06"><time>15:50–18:00</time><h3>蒜頭糖廠・平安賦歸</h3><p>復古五分車收尾，18:00 回到原下車處。</p></article>
-          </div>
+          <div class="section-head"><div><p class="eyebrow">Day at a glance</p><h2>今天會怎麼玩</h2></div><p>34 人搭遊覽車同行，點選站名看介紹。</p></div>
+          <ol class="day-list"><li><a href="#departure"><span>08:50 集合</span><strong>民生北路 256 號</strong><span aria-hidden="true">↗</span></a></li><li><a href="#departure"><span>09:00 出發</span><strong>搭遊覽車前往海線</strong><span aria-hidden="true">↗</span></a></li><li><a href="#haomeili"><span>10:00–11:00</span><strong>好美里 3D 彩繪村</strong><span aria-hidden="true">↗</span></a></li><li><a href="#church"><span>11:20–11:50</span><strong>高跟鞋教堂</strong><span aria-hidden="true">↗</span></a></li><li><a href="#lunch"><span>12:00–13:30</span><strong>英賓海產餐廳</strong><span aria-hidden="true">↗</span></a></li><li><a href="#animals"><span>14:10–15:40</span><strong>咩咩上樹萌寵樂園</strong><span aria-hidden="true">↗</span></a></li><li><a href="#sugar"><span>15:50–17:20</span><strong>蒜頭糖廠</strong><span aria-hidden="true">↗</span></a></li><li><a href="#return"><span>預計 18:00</span><strong>回到民生北路 256 號</strong><span aria-hidden="true">↗</span></a></li></ol>
         </div>
       </section>
       <section id="schedule" class="schedule-bg">
         <div class="wrap">
-          <div class="section-head"><div><p class="eyebrow">Schedule</p><h2>詳細行程</h2></div><p>每站都有導航；團體上下車時請跟著領隊清點，不自行換車或離隊。</p></div>
+          <div class="section-head"><div><p class="eyebrow">Schedule</p><h2>詳細行程</h2></div><p>從海邊的彩繪漁村，玩到綠意裡的百年糖廠。</p></div>
           <div class="timeline">
-            <article class="event">
+            <article class="event" id="departure">
               <time>09:00</time><span class="dot" aria-hidden="true"></span>
-              <div class="event-card"><div><h3>嘉義市民生北路 256 號出發</h3><p>建議 08:50 前到上車處，放好行李並完成 34 人清點；09:00 準時發車。</p><div class="meta"><span class="chip accent">08:50 前到</span><span class="chip">遊覽車移動</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%98%89%E7%BE%A9%E5%B8%82%E6%B0%91%E7%94%9F%E5%8C%97%E8%B7%AF256%E8%99%9F" target="_blank" rel="noopener">集合點導航</a></div>
+              <div class="event-card"><div><h3>嘉義市民生北路 256 號出發</h3><p>08:50 在民生北路 256 號集合，09:00 搭遊覽車出發。</p><div class="meta"><span class="chip accent">08:50 集合</span><span class="chip">遊覽車移動</span></div></div><a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%98%89%E7%BE%A9%E5%B8%82%E6%B0%91%E7%94%9F%E5%8C%97%E8%B7%AF256%E8%99%9F" target="_blank" rel="noopener">集合點導航</a></div>
             </article>
-            <article class="event">
+            <article class="event" id="haomeili">
               <time>10:00<br />– 11:00</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
-                <div class="event-copy"><h3>第一站｜好美里 3D 彩繪村</h3><p>沿著漁村小徑尋找海洋生物與立體壁畫；團體可分小隊拍照，10:50 回到集合點，保留上車時間。</p><div class="meta"><span class="chip accent">停留 60 分鐘</span><span class="chip">戶外散步</span></div><p class="route-note">下一站車程與上下車緩衝：約 20 分鐘</p></div>
+                <div class="event-copy"><h3>第一站｜好美里 3D 彩繪村</h3><p>沿著漁村小徑尋找海洋生物與立體壁畫，站進畫面裡，拍一張和海底世界相遇的趣味照片。</p><div class="meta"><span class="chip accent">停留 60 分鐘</span><span class="chip">戶外散步</span></div></div>
                 <figure class="photo"><img src="assets/haomeili-3d-village.jpg" alt="好美里 3D 彩繪村的彩繪牆與立體互動畫面" width="1024" height="683" /><figcaption>好美里 3D 彩繪村 · <a href="https://www.swcoast-nsa.gov.tw/zh-tw/attraction/details/492" target="_blank" rel="noopener">雲嘉南濱海國家風景區管理處</a>／<a href="https://www.swcoast-nsa.gov.tw/zh-tw/gwoia" target="_blank" rel="noopener">政府網站資料開放宣告</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%A5%BD%E7%BE%8E%E9%87%8C3D%E5%BD%A9%E7%B9%AA%E6%9D%91" target="_blank" rel="noopener">景點導航</a>
               </div>
             </article>
-            <article class="event">
+            <article class="event" id="church">
               <time>11:20<br />– 11:50</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
-                <div class="event-copy"><h3>第二站｜高跟鞋教堂</h3><p>以巨型藍色玻璃高跟鞋為主角拍團體照；停留只有 30 分鐘，建議先合照、再自由取景。</p><div class="meta"><span class="chip accent">停留 30 分鐘</span><span class="chip">快速拍照站</span></div><p class="route-note">11:50 集合上車，約 10 分鐘到餐廳</p></div>
+                <div class="event-copy"><h3>第二站｜高跟鞋教堂</h3><p>巨型藍色玻璃高跟鞋是布袋的醒目地標，在開闊的園區裡一起合照，留下海線旅行的紀念。</p><div class="meta"><span class="chip accent">停留 30 分鐘</span><span class="chip">玻璃地標</span></div></div>
                 <figure class="photo"><img src="assets/high-heel-church.jpg" alt="布袋高跟鞋教堂的藍色玻璃外觀" width="1920" height="1080" loading="lazy" /><figcaption>高跟鞋教堂 · <a href="https://commons.wikimedia.org/wiki/File:2023_High-Heel_Wedding_Church.jpg" target="_blank" rel="noopener">Taiwankengo</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E8%A2%8B%E9%AB%98%E8%B7%9F%E9%9E%8B%E6%95%99%E5%A0%82" target="_blank" rel="noopener">景點導航</a>
               </div>
             </article>
-            <article class="event">
+            <article class="event" id="lunch">
               <time>12:00<br />– 13:30</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
-                <div class="event-copy"><h3>第三站｜布袋英賓海產餐廳</h3><p>地址：嘉義縣布袋鎮永安里 359 號。享用團體海鮮桌菜；34 人建議事前確認桌數、兒童椅、素食與過敏需求，13:20 前完成洗手間與上車準備。</p><div class="meta"><span class="chip accent">用餐 90 分鐘</span><span class="chip">團體訂位需確認</span></div><p class="route-note">下一站車程與上下車緩衝：約 40 分鐘</p></div>
+                <div class="event-copy"><h3>第三站｜布袋英賓海產餐廳</h3><p>午餐安排海鮮桌菜，大家圍桌吃飯、歇歇腳。餐廳位在嘉義縣布袋鎮永安里 359 號。</p><div class="meta"><span class="chip accent">用餐 90 分鐘</span><span class="chip">訂位待確認</span></div></div>
                 <figure class="photo"><img src="assets/taiwanese-seafood-banquet.jpg" alt="包含蝦、烏魚子與海鮮丸的台式海鮮桌菜" width="1920" height="1061" loading="lazy" /><figcaption>台式海鮮桌菜示意，實際菜色依餐廳安排 · <a href="https://commons.wikimedia.org/wiki/File:Taiwanese_cuisine.jpg" target="_blank" rel="noopener">WikiLaurent</a>／<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps?q=625%E5%98%89%E7%BE%A9%E7%B8%A3%E5%B8%83%E8%A2%8B%E9%8E%AE%E6%B0%B8%E5%AE%89%E9%87%8C359%E8%99%9F%E8%8B%B1%E8%B3%93%E6%B5%B7%E7%94%A2%E9%A4%90%E5%BB%B3&amp;ftid=0x346e82f842923ca3:0xc3f62b81f9e52aa7" target="_blank" rel="noopener">餐廳導航</a>
               </div>
             </article>
-            <article class="event">
+            <article class="event" id="animals">
               <time>14:10<br />– 15:40</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
-                <div class="event-copy"><h3>第四站｜咩咩上樹萌寵樂園</h3><p>看羊咩咩、羊駝、小兔子等萌寵，也能體驗動物主題遊戲；請依現場人員指示餵食，不拿自己的食物餵動物。</p><div class="meta"><span class="chip accent">停留 90 分鐘</span><span class="chip">團體票務需確認</span></div><p class="route-note">15:30 開始集合，下一站車程約 10 分鐘</p></div>
+                <div class="event-copy"><h3>第四站｜咩咩上樹萌寵樂園</h3><p>走進綠意環繞的萌寵樂園，觀察可愛動物的日常，享受親子一起探索的午後。</p><div class="meta"><span class="chip accent">停留 90 分鐘</span><span class="chip">票務待確認</span></div></div>
                 <figure class="photo"><img src="https://www.meimeitree.com.tw/userfiles/images/20250908034229393.jpg" alt="咩咩上樹萌寵樂園內正在吃草的兩隻袋鼠" width="1000" height="997" loading="lazy" referrerpolicy="no-referrer" /><figcaption><a href="https://www.meimeitree.com.tw/" target="_blank" rel="noopener">咩咩上樹萌寵樂園官方網站圖片</a>（嵌入）· © 咩咩上樹萌寵樂園</figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E5%92%A9%E5%92%A9%E4%B8%8A%E6%A8%B9%E8%90%8C%E5%AF%B5%E6%A8%82%E5%9C%92" target="_blank" rel="noopener">園區導航</a>
               </div>
             </article>
-            <article class="event">
+            <article class="event" id="sugar">
               <time>15:50<br />– 17:20</time><span class="dot" aria-hidden="true"></span>
               <div class="event-card has-photo">
-                <div class="event-copy"><h3>第五站｜蒜頭糖廠蔗埕文化園區</h3><p>逛百年糖廠、看復古車站，再搭五分車賞田園。現行假日故宮南院線建議搭 16:20 蒜頭站發車、16:40 回程，來回約 45 分鐘。</p><div class="meta"><span class="chip accent">停留 90 分鐘</span><span class="chip">建議 16:20 班次</span></div><p class="route-note">34 人請主辦先向園區確認當日班次、團體安排與餘位</p></div>
+                <div class="event-copy"><h3>第五站｜蒜頭糖廠蔗埕文化園區</h3><p>沿著百年糖廠與復古車站散步，感受糖鐵的懷舊風景。五分車搭乘安排待確認。</p><div class="meta"><span class="chip accent">停留 90 分鐘</span><span class="chip">糖鐵風景</span></div></div>
                 <figure class="photo"><img src="assets/suantou-wufen-train.jpg" alt="蒜頭糖廠園區內的台糖五分車" width="1920" height="1440" loading="lazy" /><figcaption>蒜頭糖廠五分車 · <a href="https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%B3%96%E4%BA%94%E5%88%86%E8%BB%8A.jpg" target="_blank" rel="noopener">Leo20041201</a>／<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
                 <a class="action" href="https://www.google.com/maps/search/?api=1&query=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80" target="_blank" rel="noopener">園區導航</a>
               </div>
             </article>
-            <article class="event">
+            <article class="event" id="return">
               <time>18:00</time><span class="dot" aria-hidden="true"></span>
-              <div class="event-card"><div><h3>第六站｜回到民生北路下車處</h3><p>17:20 清點後發車，預計 18:00 抵達嘉義市民生北路 256 號；實際時間依當日交通狀況。</p><div class="meta"><span class="chip accent">預計 18:00 抵達</span><span class="chip">原上車處解散</span></div></div><a class="action" href="https://www.google.com/maps/dir/?api=1&origin=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80&destination=%E5%98%89%E7%BE%A9%E5%B8%82%E6%B0%91%E7%94%9F%E5%8C%97%E8%B7%AF256%E8%99%9F&travelmode=driving" target="_blank" rel="noopener">返程路線</a></div>
+              <div class="event-card"><div><h3>第六站｜回到民生北路下車處</h3><p>17:20 從糖廠返程，預計 18:00 回到民生北路 256 號，實際抵達時間依交通狀況。</p><div class="meta"><span class="chip accent">預計 18:00 抵達</span><span class="chip">原上車處解散</span></div></div><a class="action" href="https://www.google.com/maps/dir/?api=1&origin=%E8%92%9C%E9%A0%AD%E7%B3%96%E5%BB%A0%E8%94%97%E5%9F%95%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80&destination=%E5%98%89%E7%BE%A9%E5%B8%82%E6%B0%91%E7%94%9F%E5%8C%97%E8%B7%AF256%E8%99%9F&travelmode=driving" target="_blank" rel="noopener">返程路線</a></div>
             </article>
           </div>
         </div>
       </section>
-      <section id="reminders">
-        <div class="wrap">
-          <div class="section-head"><div><p class="eyebrow">Before we go</p><h2>行前只記這幾件事</h2></div><p>沿海戶外活動多，輕裝、防曬與準時集合最重要。</p></div>
-          <div class="reminder-grid">
-            <article class="reminder"><div class="icon" aria-hidden="true">🧢</div><h3>防曬與補水</h3><p>帶遮陽帽、太陽眼鏡、防曬乳與水；早晚怕冷可加一件薄外套。</p></article>
-            <article class="reminder"><div class="icon" aria-hidden="true">👟</div><h3>穿好走的鞋</h3><p>彩繪村與糖廠都要步行，建議運動鞋；萌寵區依現場規定保持距離。</p></article>
-            <article class="reminder"><div class="icon" aria-hidden="true">🍽️</div><h3>餐食需求先統計</h3><p>34 人的素食、過敏、兒童椅與桌數請提前回報主辦，避免現場臨時調整。</p></article>
-            <article class="reminder"><div class="icon" aria-hidden="true">⏰</div><h3>每站提早 10 分鐘集合</h3><p>由領隊統一清點；五分車有固定發車時間，最後一站更不能延誤。</p></article>
-          </div>
-          <div class="callout"><strong>主辦出發前再確認：</strong>英賓海產餐廳 34 人桌菜、咩咩上樹團體入園，以及蒜頭糖廠 16:20 五分車班次與團體安排。頁面未把這三項標示為已訂妥。</div>
-        </div>
-      </section>
     </main>
-    <footer><div class="wrap">行程更新：2026.09.27 · 2026.10.25 嘉義海線親子團體一日遊</div></footer>
+    <footer><div class="wrap">行程更新：2026.10.23 · 2026.10.25 嘉義海線親子團體一日遊</div></footer>
   </body>
 </html>
